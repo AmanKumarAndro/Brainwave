@@ -1,0 +1,598 @@
+/* Googel Fonts  */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200&family=Poppins:wght@400;500;600;700&display=swap');
+
+* {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+    scroll-padding-top: 2rem;
+    box-sizing: border-box;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+    padding-top: 60px;
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+}
+
+h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="date"],
+textarea {
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+
+/* Variables */
+:root {
+    --container-color: #1a1e21;
+    --second-color: #21a2d9;
+    --text-color: #172317;
+    --bg-color: #fff;
+}
+
+::selection {
+    color: var(--bg-color);
+    background: var(--second-color);
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    width: 100%;
+}
+
+section {
+    padding: 3rem 0 2rem;
+}
+
+.container {
+    max-width: 1068px;
+    margin: auto;
+    width: 100%;
+
+}
+
+/* CSS for Header */
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 200;
+}
+
+header.shadow {
+    background: var(--container-color);
+    transition: 0.4s;
+    box-shadow: 0 1px 4px hsl(0 4% 14% /10%);
+}
+
+header.shadow .logo {
+    color: var(--bg-color);
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 0;
+}
+
+.life {
+    color: var(--second-color);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--bg-color);
+}
+
+.logo span {
+    color: var(--second-color);
+}
+
+.login {
+    padding: 8px 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+    border-radius: 4px;
+    background: var(--second-color);
+    color: var(--bg-color);
+}
+
+.login:hover {
+    background: hsl(24, 98%, 58%);
+    transition: 0.3s;
+}
+
+.signup {
+    /* flex:1 1 200px; */
+    /* flex: 0.5; */
+    margin-right: 10px;
+    margin-left: auto;
+    display: flex;
+    position: -webkit-sticky;
+    padding: 8px 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+    border-radius: 100px;
+    background: var(--second-color);
+    color: var(--bg-color);
+}
+
+.signup:hover {
+    background: hsl(24, 98%, 58%);
+    transition: 0.3s;
+}
+
+
+.abuttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+}
+
+.add-btn {
+    position: fixed;
+    bottom: 20px; 
+    right: 20px;  
+    z-index: 1000; 
+}
+
+
+
+
+.butm{
+    
+    margin-right: 2px;
+    padding: 8px 14px;
+    text-transform: uppercase;
+    font-weight: 500;
+    border-radius: 100px;
+    background: var(--second-color);
+    color: var(--bg-color);
+}
+
+
+
+/* Home CSS */
+
+.home {
+    width: 100%;
+    min-height: 440px;
+    background: var(--container-color);
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-text {
+    color: var(--bg-color);
+    text-align: center;
+}
+
+.home-title {
+    font-size: 3.5rem;
+}
+
+.home-subtitle {
+    font-size: 1rem;
+    font-weight: 400;
+}
+
+/* Post Filter CSS */
+
+.post-filter {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 1.5rem;
+    margin-top: 2rem !important;
+}
+
+.filter-item {
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.active-filter {
+    background: var(--second-color);
+    padding: 4PX 10px;
+    border-radius: 100px;
+}
+
+/* Posts CSS */
+
+.post {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, auto));
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.post-box {
+    background: var(--bg-color);
+    padding: 15px;
+    box-shadow: 0 4px 15px hsl(355deg 25% 15% / 10%);
+    border-radius: 1rem;
+}
+
+.post-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 0.5rem;
+}
+
+.category {
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: var(--second-color);
+}
+
+.post-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--text-color);
+    /* To make sure the title is within 2 lines only */
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.post-date {
+    display: flex;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    font-weight: 400;
+    margin-top: 4px;
+}
+
+.post-description {
+    font-size: 0.9rem;
+    line-height: 1.5rem;
+    margin: 5px 0 10px;
+    /* To make sure the post description within 3 lines */
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.profile-img {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center;
+    border: 2px solid var(--second-color);
+}
+
+.profile.name {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* Footer CSS */
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 0;
+}
+
+.footer p {
+    font-size: 1rem;
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    column-gap: 1rem;
+}
+
+.social .bx {
+    font-size: 1.4rem;
+    color: var(--text-color);
+}
+
+.social.bx:hover {
+    color: var(--second-color);
+    transition: 0.4s all linear;
+}
+
+/* Post-page CSS */
+
+.post-header {
+    width: 100%;
+    height: 500px;
+    background: var(--container-color);
+}
+
+.post-container {
+    max-width: 800px;
+    margin: auto;
+    width: 100%;
+}
+
+.header-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 4rem !important;
+}
+
+.back-home {
+    color: var(--second-color);
+    font-size: 1rem;
+}
+
+.header-title {
+    width: 90%;
+    font-size: 2.6rem;
+    color: var(--bg-color);
+    margin-bottom: 1rem;
+}
+
+.header-img {
+    width: 100%;
+    height: 420px;
+    object-fit: contain;
+    object-position: center;
+}
+
+.post-content {
+    margin-top: 10rem !important;
+}
+
+.sub-heading {
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.post-text {
+    font-size: 1rem;
+    line-height: 1.7rem;
+    margin: 1rem 0;
+    text-align: justify;
+}
+
+.share {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 1rem;
+}
+
+.share-title {
+    font-size: 1.4rem;
+
+}
+
+
+/* //position a button page to left of the navbar? */
+
+.header-img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+    object-position: center;
+    margin-top: 4rem !important;
+    margin-bottom: 1rem !important;
+
+}
+
+
+/* Post Content Section */
+.post-content {
+    background-color: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(10px);
+    padding: 2rem;
+    margin: 2rem auto;
+    max-width: 800px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+
+
+    /* Ensure content is above the blurred background */
+}
+
+.sub-heading {
+    font-size: 1.5rem;
+    margin-top: 1rem;
+}
+
+.post-text {
+    font-size: 1rem;
+    margin: 0.5rem 0 1rem;
+}
+
+/* Share Section */
+.share {
+    text-align: center;
+    margin: 2rem auto;
+}
+
+.share-title {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.social-link {
+    color: #333;
+    font-size: 1.5rem;
+    text-decoration: none;
+}
+
+
+
+
+
+/* Add Blog Section Styles */
+.add-blog {
+    padding: 3rem ;
+    background: var(--bg-color);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    margin: 2rem auto;
+    max-width: 800px;
+}
+
+.add-blog h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-color);
+    text-align: center;
+}
+
+#blog-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#blog-form input,
+#blog-form textarea {
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    background: var(--bg-color);
+    color: var(--text-color);
+}
+
+#blog-form input::placeholder,
+#blog-form textarea::placeholder {
+    color: #888;
+}
+
+#blog-form input:focus,
+#blog-form textarea:focus {
+    border-color: var(--second-color);
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 159, 77, 0.2);
+}
+
+#blog-form button {
+    padding: 0.75rem;
+    border: none;
+    border-radius: 0.25rem;
+    background: var(--second-color);
+    color: var(--bg-color);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+#blog-form button:hover {
+    background: hsl(24, 98%, 58%);
+}
+
+#blog-form textarea {
+    resize: vertical;
+    max-height: 200px;
+}
+
+
+/* Website Responsiveness */
+
+
+@media (max-width:1060px) {
+    .container {
+        margin: 0 auto;
+        width: 95%;
+    }
+}
